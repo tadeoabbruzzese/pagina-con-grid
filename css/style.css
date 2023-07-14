@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Montserrat:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    --color-principal: #102f49;
+    --ancho-maximo: 1200px;
+}
+
+/* ESTILOS GENERALES */
+body{
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-principal);
+    background-color: #e3e3e3;
+    font-size: 1.2em; /* */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ESTILOS PARTICULARES */
+
+/* header y footer */
+header,
+footer{
+    max-width: var(--ancho-maximo);
+    height: 100px;
+    background-color: var(--color-principal);
+    margin: auto;
+    display: grid;
+    align-items: center;
+}
+    header a,
+    footer a{
+        color: #ffea8d;
+    }
+
+        header img,
+        footer img{
+            vertical-align: middle;
+            margin: 0 12px;
+        }
+
+/* Main */
+main{
+    max-width: var(--ancho-maximo);
+    margin: auto;
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto 160px;
+}
+
+
+/* section contenido */
+
+    .contenido{
+        background-color: #f4f4f4;
+        padding: 20px;
+        grid-column: span 4; /*Toma 4 columnas*/
+        column-gap: 24px;
+    }
+
+        .contenido article{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 80px 1fr;
+            column-gap: 24px;
+        }
+
+            .contenido article img{
+                padding-bottom: 24px;
+                grid-column: span 2;
+                grid-row: span 2;
+                width: 100%;
+            }
+
+/* Section aside / notas */
+
+.notas{
+    background-color: #974343;
+    
+}
+    .notas article{
+        color: #f4f4f4;
+        text-align: center;
+        margin-top: 56px;
+    }
+
+/* Section promos / footer */
+
+.promos{
+    padding: 24px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column: 1/-1; /*le digo que ocupe toda la grilla*/
+    column-gap: 24px;
+}
+    .promos article{
+        background-color: #626974;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
